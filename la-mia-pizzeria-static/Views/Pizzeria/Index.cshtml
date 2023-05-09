@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+
+@model List<Pizza>
+
+<div class="container" style="margin-right: 35vw; max-width: 60vw; padding: 8vh 3vw; margin-top: 7vh; margin-bottom: 7vh; background-image: url(https://www.dapino.it/wp-content/uploads/2020/05/sfondo-pers-menu.jpg?id=5403) !important;">
+    <div class="row pb-5">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="ml-6">Menù</h1>
+            </div>
+        </div>
+    </div>
+    <div>
+        @foreach (var pizza in Model)
+        {
+            <div class="row mb-3">
+                <div class="col d-flex align-items-center fs-4 pb-2">
+                    <div class="col-3">
+                        <img src="~/img/@pizza.Image" style="width: 250px; height: 170px;" />
+                    </div>
+                    <div class="col-2 text-center fw-bold">
+                        @pizza.Name
+                    </div>
+                    <div class="col-5 text-center">
+                        Ingredienti: @pizza.Ingredients
+                    </div>
+                    <div class="col-2 text-center fw-bold">
+                        @pizza.Price &euro;
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
