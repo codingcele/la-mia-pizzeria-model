@@ -14,8 +14,8 @@
     }
 </style>
 <body style="background-image: url(https://www.dapino.it/wp-content/uploads/2021/05/Menu-pizzeria-sfondo.jpg); background-size: cover; background-attachment: fixed;">
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 px-3 py-5" style="font-size:40px;">
+    <header class="bg-white" style="height: 20vh">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow mb- px-3 py-5" style="font-size:40px;">
             <div class="container-fluid d-flex justify-content-between">
                 <div>
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="font-size: 30px;">Pizzeria da <span style="color:red;">Cele</span></a>
@@ -38,15 +38,16 @@
         </nav>
     </header>
 
-    <main role="main">
+    <main>
         @RenderBody()
     </main>
 
-    <footer class="border-top footer text-muted py-4 px-2 fixed-bottom" style="background-color:white;">
+    <footer class="border-top footer text-muted py-4 px-2" style="height: 8vh; width: 100%; background-color:white;">
         <div class="container">
             &copy; 2023 - Pizzeria da <span style="color:red;">Cele</span> - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

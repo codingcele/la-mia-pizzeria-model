@@ -5,7 +5,7 @@
 
 @model List<Pizza>
 
-<div class="container" style="margin-right: 35vw; max-width: 60vw; padding: 8vh 3vw; margin-top: 7vh; margin-bottom: 7vh; background-image: url(https://www.dapino.it/wp-content/uploads/2020/05/sfondo-pers-menu.jpg?id=5403) !important;">
+<div class="container" style="min-height: 58vh; margin-right: 35vw; max-width: 60vw; padding: 8vh 3vw; margin-top: 7vh; margin-bottom: 7vh; background-image: url(https://www.dapino.it/wp-content/uploads/2020/05/sfondo-pers-menu.jpg?id=5403) !important;">
     <div class="row pb-5">
         <div class="col-12">
             <div class="d-flex justify-content-between align-items-center">
@@ -33,8 +33,11 @@
                         <div class="col-5 text-center">
                             Ingredienti: @pizza.Ingredients
                         </div>
-                        <div class="col-2 text-center fw-bold">
+                        <div class="col-1 text-center fw-bold">
                             @pizza.Price &euro;
+                        </div>
+                        <div class="col-1 text-center pl-4">
+                            <a href="@Url.Action("Details", "Pizzeria", new { id = pizza.Id })" class="btn btn-primary">Dettagli</a>
                         </div>
                     </div>
                 </div>
